@@ -36,4 +36,19 @@ var answer = average.toFixed(2);
 document.querySelector('#answer1').textContent = "The average price is $" + answer;
 
 console.log("The average price is $" + answer);
-//END QUESTION ONE 
+//END QUESTION ONE
+
+// QUESTION TWO
+
+var newItems = items.filter( function(item) {
+return (item.price > 14 && item.price < 18);
+});
+// items.forEach( function () {
+//   answer2.appendChild(document.createTextNode(items.name + '\n'));
+// });
+
+var newItems = document.querySelector('#answer2')
+items.forEach( function (item) {
+  answer2.appendChild(document.createTextNode(item.title + '\n'));
+});
+// END QUESTION TWO
