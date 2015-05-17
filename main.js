@@ -40,15 +40,25 @@ console.log("The average price is $" + answer);
 
 // QUESTION TWO
 
+// get all three items
+
 var newItems = items.filter( function(item) {
 return (item.price > 14 && item.price < 18);
 });
-// items.forEach( function () {
-//   answer2.appendChild(document.createTextNode(items.name + '\n'));
-// });
 
-var newItems = document.querySelector('#answer2')
-items.forEach( function (item) {
-  answer2.appendChild(document.createTextNode(item.title + '\n'));
+//get their titles
+
+var newPrices = newItems.map( function(prices) {
+return prices.title + '\n';
 });
+
+// get answer
+var answer = newPrices;
+
+// drop in DOM Node
+
+document.querySelector('#answer2').textContent = answer + '\n';
+
+console.log("The items that cost $14-18 are " + answer);
+
 // END QUESTION TWO
