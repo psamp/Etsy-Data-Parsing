@@ -1,4 +1,4 @@
-// GET LIST OF PRICES
+// // GET LIST OF PRICES
 
 // var answer1 = document.querySelector('#answer1');
 
@@ -19,7 +19,6 @@ var allPrices = items.map( function (item) {
 });
 
 //get the sum
-
 var sum = allPrices.reduce( function (previous, current) {
   
   return previous + current;
@@ -36,8 +35,8 @@ var answer = average.toFixed(2);
 document.querySelector('#answer1').textContent = "The average price is $" + answer;
 
 // log in console
-
 console.log("The average price is $" + answer);
+
 //END QUESTION ONE
 
 
@@ -74,27 +73,36 @@ console.log("The items that cost $14-18 are " + answer2);
 var itemName = items.map( function(name){
 
   return (name.title + " | " + name.price + " " + name.currency_code + '\n');
+
 });
 
 // filter items by currency 
 var britishPrice = items.filter( function(code) {
 
   if (code.currency_code === "GBP") {
+
     return code;
+
   }
+
 });
 
 //insert in dom node
 britishPrice.forEach(function (answer) {
+
   document.querySelector('#answer3').textContent = answer.title + " | " + answer.price + " " + answer.currency_code;
+
 });
 
 // drop in console
 var britishConsole = items.filter( function(cnsl) {
 
   if (cnsl.currency_code === "GBP") {
+
     console.log(cnsl.title + " | " + cnsl.price + " " + cnsl.currency_code);
+
   }
+
 });
 
 //END QUESTION THREE
