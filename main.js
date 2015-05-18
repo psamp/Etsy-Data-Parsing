@@ -90,7 +90,7 @@ var britishPrice = items.filter( function(code) {
 //insert in dom node
 britishPrice.forEach(function (answer) {
 
-  document.querySelector('#answer3').textContent = answer.title + " | " + answer.price + " " + answer.currency_code;
+  document.querySelector('#answer3').textContent = answer.title + " costs \u00A3" + answer.price;
 
 });
 
@@ -99,10 +99,14 @@ var britishConsole = items.filter( function(cnsl) {
 
   if (cnsl.currency_code === "GBP") {
 
-    console.log(cnsl.title + " | " + cnsl.price + " " + cnsl.currency_code);
-
+    console.log(cnsl.title + " costs \u00A3" + cnsl.price);
   }
 
 });
 
 //END QUESTION THREE
+
+//QUESTION FOUR 
+
+
+// END QUESTION FOUR

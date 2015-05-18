@@ -1,1 +1,1 @@
-## TIY wee two end of week project.
+## TIY week two end of week project.
